@@ -1,0 +1,215 @@
+body {
+  font-family: "Cabin", sans-serif;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.duck {
+  margin: 10px;
+  width: 15%;
+}
+nav {
+  width: 50%;
+  padding: 10px;
+  background-color: #fff000;
+  margin: auto;
+  border-radius: 8px;
+}
+.navBtn {
+  border: none;
+  font-size: 17px;
+  background-color: #fff000;
+  border-radius: 10px;
+}
+.btn:hover {
+  text-decoration: underline;
+  background-color: #fff000;
+}
+h1 {
+  font-size: 110px;
+}
+h2 {
+  font-size: 55px;
+}
+h3 {
+  font-size: 38px;
+}
+h4 {
+  font-size: 25px;
+  margin-left: 40px;
+}
+h5{
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+/* p{
+  margin: 5px 0 2px 0;
+} */
+input {
+  max-width: 100px;
+  margin: 10px;
+}
+
+.loginContainer {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 45px;
+  margin: 0 auto 30px;
+  padding: 45px;
+  text-align: center;
+}
+.loginBtnContainer {
+  display: flex;
+}
+.registerContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 45px;
+  margin: 0 auto 100px;
+}
+.hidde {
+  display: none !important;
+}
+li {
+  margin: 10px 0px;
+  padding: 15px 10px;
+  border-bottom: 2px solid black;
+}
+.yourbookinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  min-width: 150px;
+}
+.loaninfo {
+  background-color: #fff000;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.loaninfo div img{
+  max-width: 200px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+span img{
+  max-width: 100px;
+}
+.allbookscontainer {
+  border: 5px solid black;
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 8px;
+}
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.persinolinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.youBookHeading {
+  margin: 40px;
+}
+.rubrikInLine {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.addbook {
+  border: 5px solid black;
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 30px;
+}
+.addsoundbook {
+  border: 5px solid black;
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 30px;
+}
+.inLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-basis: 50%
+}
+.inLineaddbooks{
+  display: flex;
+  justify-content: space-around;
+}
+.ontop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ontopaddbooks{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+.Standardbtn {
+  margin: 10px;
+  background-color: goldenrod;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  min-width: 150px;
+  max-height: 50px;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.Standardbtn:not(:disabled):hover{
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.Standardbtn:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+.bottoncontainer{
+  background-color: #daa520;
+  height: 80px;
+  margin: 0;
+}
+.foottsyle{
+  color: aliceblue;
+  font-size: 17px;
+  margin: 0;
+}
+svg{
+  margin: 0;
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+    />
+    <link rel="stylesheet" href="Style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
+      integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Inlämning2</title>
+  </head>
+  <body>
+    <header>
+      <h1>BookDucks</h1>
+      <img
+        class="duck"
+        src="https://m.media-amazon.com/images/I/21BS3a1-4cL.jpg"
+        alt=""
+      />
+    </header>
+    <main>
+      <section class="loginContainer" id="loginContainer">
+        <h2>Logga in</h2>
+        <div class="inlog">
+          <label for="username">Username</label>
+          <input type="text" id="username" value="" />
+          <label for="password">Lösenord</label>
+          <input type="password" id="password" />
+        </div>
+        <div class="loginBtnContainer">
+          <button id="loginBtn" class="Standardbtn">Log in</button>
+          <button id="registerBtn" class="Standardbtn">Register</button>
+        </div>
+      </section>
+      <section id="registerContainer" class="registerContainer hidde">
+        <div>
+          <label for="username">Användarnamn</label>
+          <input type="text" id="newname" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="newemail" />
+        </div>
+        <div>
+          <label for="password">Lösenord</label>
+          <input type="text" id="newpassword" />
+        </div>
+        <button id="CreateUser" class="Standardbtn">Skapa användare</button>
+      </section>
+      <section id="profileContainer" class="profileContaine hidde">
+        <div class="rubrikInLine">
+          <div>
+            <h2 id="welcomeName"></h2>
+          </div>
+          <button id="logoutBtn" class="logout Standardbtn">Logga Ut</button>
+        </div>
+        <nav class="inLine">
+          <button id="SeOthersBookBtn" class="navBtn btn">
+            Se utlåningsböcker
+          </button>
+          <button id="SeBookBtn" class="navBtn btn">Se mina böcker</button>
+          <button id="addBookBtn" class="navBtn btn">
+            Lägga till nya böcker
+          </button>
+          <button id="profileBtn" class="navBtn btn">Mina Profil</button>
+        </nav>
+      </section>
+      <section class="allbookscontainer hidde" id="allbookscontainer"></section>
+      <section id="addbook" class="addbook hidde">
+        <h4>Lägg till nya böcker</h4>
+
+        <div class="inLineaddbooks">
+          <div class="ontopaddbooks">
+            <h5>Fyll i alla fält</h5>
+            <div class="inLineaddbooks">
+              <label for="title">Titel:</label>
+              <input type="text" id="inputName" />
+            </div>
+            <div class="inLineaddbooks">
+              <label for="author">Författare:</label>
+              <input type="text" id="inputAuthor" />
+            </div>
+            <div class="inLineaddbooks">
+              <label for="page">Antal sidor:</label>
+              <input type="number" id="inputnum" />
+            </div>
+            <div class="inLineaddbooks">
+              <label for="Grades">Betyg:1-10</label>
+              <input type="number" id="inputgrades" min="0" max="10" value="" />
+            </div>
+            <div class="inLineaddbooks">
+              <label for="imge">Ladda upp bild:</label>
+              <input type="file" id="inputImg" name="image" />
+            </div>
+          </div>
+          <div class="ontopaddbooks">
+            <!-- checkbox -->
+            <h5>Välj gener</h5>
+              <div class="inLine">
+                <input type="checkbox" value="7" />
+                <label for="type">Action</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="8" />
+                <label for="type">Adventure</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="5" />
+                <label for="type">Fantasy</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="3" />
+                <label for="type">Horror</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="2" />
+                <label for="type">Humor</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="1" />
+                <label for="type">Romance</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="6" />
+                <label for="type">Sci-fi</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="4" />
+                <label for="type">child-friendly</label>
+              </div>
+          </div>
+          <div class="ontop">
+            <button id="addBok" class="Standardbtn">Lägg till</button>
+          </div>
+        </div>
+      </section>
+      <section id="addsoundbook" class="addsoundbook hidde">
+        <h4>Lägg till nya Ljudböcker</h4>
+        <div class="inLineaddbooks">
+          <div class="ontopaddbooks">
+            <h5>Fyll i alla fält</h5>
+              <div class="inLineaddbooks">
+                <label for="title">Titel:</label>
+                <input type="text" id="inputTitle" />
+              </div>
+              <div class="inLineaddbooks">
+                <label for="author">Releasedate:</label>
+                <input type="date" id="inputReleasedate" />
+
+              </div>
+              <div class="inLineaddbooks">
+                <label for="page">Ljudlängd</label>
+                <input type="time" id="inputaudi" step="0.001" />
+              </div>
+              <div class="inLineaddbooks">
+                <label for="Grades">Betyg: 1-10</label>
+                <input type="number" id="inputgradessound" min="1" max="10" />
+              </div>
+              <div class="inLineaddbooks">
+              <label for="img">Ladda upp bild:</label>
+              <input type="file" id="inputImg2" />
+              </div>
+            </div>
+            <div class="ontopaddbooks">
+            <!-- checkbox -->
+            <h5>Välj gener</h5>
+              <div class="inLine">
+                <input type="checkbox" value="7" />
+                <label for="type">Action</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="8" />
+                <label for="type">Adventure</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="5" />
+                <label for="type">Fantasy</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="3" />
+                <label for="type">Horror</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="2" />
+                <label for="type">Humor</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="1" />
+                <label for="type">Romance</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="6" />
+                <label for="type">Sci-fi</label>
+              </div>
+              <div class="inLine">
+                <input type="checkbox" value="4" />
+                <label for="type">child-friendly</label>
+              </div>
+            </div>
+            <div class="ontop">
+          <button id="addsoundBok" class="Standardbtn">Lägg till</button>
+            </div>
+        </div>
+      </section>
+      <section id="youBooks" class="allbookscontainer hidde">
+        <h3 class="youBookHeading">Dina utlåningsböcker:</h3>
+        <div class="inLine">
+          <ul id="booklist"></ul>
+          <ul id="audiobooklist"></ul>
+        </div>
+      </section>
+      <section id="persinolinfo" class="persinolinfo hidde"></section>
+    </main>
+    <footer>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#daa520"
+          fill-opacity="1"
+          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+      <!-- <div class="bottoncontainer">
+    <div class="ontop">
+      <p class="foottsyle">Den här sidan är gjord av Emma Olsson april 2022</p>
+      <p class="foottsyle">Kurser Cms </p>
+    </div>
+    </div> -->
+    </footer>
+    <script src="apianrop.js"></script>
+    <script src="variable.js"></script>
+    <script src="User.js"></script>
+    <script src="additem.js"></script>
+    <script src="coverPicture.js"></script>
+    <script src="main.js"></script>
+    <script src="meny.js"></script>
+  </body>
+</html>
