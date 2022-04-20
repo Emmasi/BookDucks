@@ -29,13 +29,15 @@
     <header>
       <div class="inlinehead">
         <img
-        class="duck"
-        src="https://m.media-amazon.com/images/I/21BS3a1-4cL.jpg"
-        alt=""
-      />
-      <h1>BookDucks</h1>
+          class="duck"
+          src="https://m.media-amazon.com/images/I/21BS3a1-4cL.jpg"
+          alt=""
+        />
+        <h1>BookDucks</h1>
       </div>
-      <button class="none" id="iconlog"><i class="fa fa-user" aria-hidden="true" ></i></button>
+      <button class="none" id="iconlog">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </button>
     </header>
     <main>
       <section class="loginContainer hidde" id="loginContainer">
@@ -71,37 +73,37 @@
           <div>
             <h2 id="welcomeName"></h2>
           </div>
-
         </div>
         <nav class="inLine">
           <button id="SelibraryBtn" class="navBtn btn">Se biblioteket</button>
           <button id="SeBookBtn" class="navBtn btn">Se mina Profil</button>
-          <button id="addBookBtn" class="navBtn btn">Lägga till nya böcker</button>
-          <!-- <button id="profileBtn" class="navBtn btn"></button> -->
+          <button id="addBookBtn" class="navBtn btn">
+            Lägga till nya böcker
+          </button>
           <button id="logoutBtn" class="navBtn btn">Logga Ut</button>
         </nav>
       </section>
-      <nav class="genrefilter" id="genrefilter">
-        <fieldset style="border:1px solid goldenrod;">
-        <legend>Filter:</legend>
-        <label for="Action"> Action</label>
-        <input type="checkbox" id="Action" class="visually-hidden">
-        <label for="Fantasy"> Fantasy</label>
-        <input type="checkbox" id="Fantasy" class="visually-hidden">
-        <label for="Humor"> Humor</label>
-        <input type="checkbox" id="Humor" class="visually-hidden">
-        <label for="Adventure"> Adventure</label>
-        <input type="checkbox" id="Adventure" class="visually-hidden">
-        <label for="Horror"> Horror</label>
-        <input type="checkbox" id="Horror" class="visually-hidden">
-        <label for="Romance"> Romance</label>
-        <input type="checkbox" id="Romance" class="visually-hidden">
-        <label for="Sci"> Sci-fi</label>
-        <input type="checkbox" id="Sci" class="visually-hidden">
-        <label for="child"> child-friendly</label>
-        <input type="checkbox" id="child" class="visually-hidden">
-      </fieldset>
-      </nav>
+      <!-- <nav class="genrefilter" id="genrefilter">
+        <fieldset style="border: 1px solid goldenrod">
+          <legend>Filter:</legend>
+          <label for="Action"> Action</label>
+          <input type="checkbox" id="Action" class="visually-hidden" />
+          <label for="Fantasy"> Fantasy</label>
+          <input type="checkbox" id="Fantasy" class="visually-hidden" />
+          <label for="Humor"> Humor</label>
+          <input type="checkbox" id="Humor" class="visually-hidden" />
+          <label for="Adventure"> Adventure</label>
+          <input type="checkbox" id="Adventure" class="visually-hidden" />
+          <label for="Horror"> Horror</label>
+          <input type="checkbox" id="Horror" class="visually-hidden" />
+          <label for="Romance"> Romance</label>
+          <input type="checkbox" id="Romance" class="visually-hidden" />
+          <label for="Sci"> Sci-fi</label>
+          <input type="checkbox" id="Sci" class="visually-hidden" />
+          <label for="child"> child-friendly</label>
+          <input type="checkbox" id="child" class="visually-hidden" />
+        </fieldset>
+      </nav> -->
       <section class="startcontainer" id="startcontainer">
         <h2>Vårat Bibliotek</h2>
         <div class="allbookscontainer" id="allbookscontainer"></div>
@@ -136,38 +138,38 @@
           <div class="ontopaddbooks">
             <!-- checkbox -->
             <h5>Välj gener</h5>
-              <div class="inLine">
-                <input type="checkbox" value="7" />
-                <label for="type">Action</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="8" />
-                <label for="type">Adventure</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="5" />
-                <label for="type">Fantasy</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="3" />
-                <label for="type">Horror</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="2" />
-                <label for="type">Humor</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="1" />
-                <label for="type">Romance</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="6" />
-                <label for="type">Sci-fi</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="4" />
-                <label for="type">child-friendly</label>
-              </div>
+            <div class="inLine">
+              <input type="checkbox" value="7" />
+              <label for="type">Action</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="8" />
+              <label for="type">Adventure</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="5" />
+              <label for="type">Fantasy</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="3" />
+              <label for="type">Horror</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="2" />
+              <label for="type">Humor</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="1" />
+              <label for="type">Romance</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="6" />
+              <label for="type">Sci-fi</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="4" />
+              <label for="type">child-friendly</label>
+            </div>
           </div>
           <div class="ontop">
             <button id="addBok" class="Standardbtn">Lägg till</button>
@@ -179,83 +181,81 @@
         <div class="inLineaddbooks">
           <div class="ontopaddbooks">
             <h5>Fyll i alla fält</h5>
-              <div class="inLineaddbooks">
-                <label for="title">Titel:</label>
-                <input type="text" id="inputTitle" />
-              </div>
-              <div class="inLineaddbooks">
-                <label for="author">Releasedate:</label>
-                <input type="date" id="inputReleasedate" />
-
-              </div>
-              <div class="inLineaddbooks">
-                <label for="page">Ljudlängd</label>
-                <input type="time" id="inputaudi" step="0.001" />
-              </div>
-              <div class="inLineaddbooks">
-                <label for="Grades">Betyg: 1-10</label>
-                <input type="number" id="inputgradessound" min="1" max="10" />
-              </div>
-              <div class="inLineaddbooks">
+            <div class="inLineaddbooks">
+              <label for="title">Titel:</label>
+              <input type="text" id="inputTitle" />
+            </div>
+            <div class="inLineaddbooks">
+              <label for="author">Releasedate:</label>
+              <input type="date" id="inputReleasedate" />
+            </div>
+            <div class="inLineaddbooks">
+              <label for="page">Ljudlängd</label>
+              <input type="time" id="inputaudi" step="0.001" />
+            </div>
+            <div class="inLineaddbooks">
+              <label for="Grades">Betyg: 1-10</label>
+              <input type="number" id="inputgradessound" min="1" max="10" />
+            </div>
+            <div class="inLineaddbooks">
               <label for="img">Ladda upp bild:</label>
               <input type="file" id="inputImg2" />
-              </div>
             </div>
-            <div class="ontopaddbooks">
+          </div>
+          <div class="ontopaddbooks">
             <!-- checkbox -->
             <h5>Välj gener</h5>
-              <div class="inLine">
-                <input type="checkbox" value="7" />
-                <label for="type">Action</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="8" />
-                <label for="type">Adventure</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="5" />
-                <label for="type">Fantasy</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="3" />
-                <label for="type">Horror</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="2" />
-                <label for="type">Humor</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="1" />
-                <label for="type">Romance</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="6" />
-                <label for="type">Sci-fi</label>
-              </div>
-              <div class="inLine">
-                <input type="checkbox" value="4" />
-                <label for="type">child-friendly</label>
-              </div>
+            <div class="inLine">
+              <input type="checkbox" value="7" />
+              <label for="type">Action</label>
             </div>
-            <div class="ontop">
-          <button id="addsoundBok" class="Standardbtn">Lägg till</button>
+            <div class="inLine">
+              <input type="checkbox" value="8" />
+              <label for="type">Adventure</label>
             </div>
+            <div class="inLine">
+              <input type="checkbox" value="5" />
+              <label for="type">Fantasy</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="3" />
+              <label for="type">Horror</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="2" />
+              <label for="type">Humor</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="1" />
+              <label for="type">Romance</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="6" />
+              <label for="type">Sci-fi</label>
+            </div>
+            <div class="inLine">
+              <input type="checkbox" value="4" />
+              <label for="type">child-friendly</label>
+            </div>
+          </div>
+          <div class="ontop">
+            <button id="addsoundBok" class="Standardbtn">Lägg till</button>
+          </div>
         </div>
       </section>
       <section id="youBooks" class="persinolinfocontainer hidde">
         <div class="totheleft">
           <h3>Dina uppgifter:</h3>
-        <div id="persinolinfo" class="persinolinfo"></div>
-      </div>
+          <div id="persinolinfo" class="persinolinfo"></div>
+        </div>
         <div class="bookcontainer">
           <h4 class="youBookHeading">Dina utlåningsböcker:</h4>
           <div class="inLine">
-          <ul id="booklist"></ul>
-          <ul id="audiobooklist"></ul>
-        </div>
+            <ul id="booklist"></ul>
+            <ul id="audiobooklist"></ul>
+          </div>
         </div>
       </section>
-      
     </main>
     <footer>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
