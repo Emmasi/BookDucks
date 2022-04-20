@@ -1,15 +1,22 @@
 body {
   font-family: "Cabin", sans-serif;
   margin: 0;
+  background-color: goldenrod;
 }
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  border-bottom: #000 7px solid;
+  margin-bottom: 20px;
+  background-color:white
 }
 .duck {
   margin: 10px;
-  width: 15%;
+  width: 30%;
+}
+.fa{
+  font-size: 40px;
 }
 nav {
   width: 50%;
@@ -29,10 +36,10 @@ nav {
   background-color: #fff000;
 }
 h1 {
-  font-size: 110px;
+  font-size: 80px;
 }
 h2 {
-  font-size: 55px;
+  font-size: 45px;
 }
 h3 {
   font-size: 38px;
@@ -83,7 +90,7 @@ input {
 li {
   margin: 10px 0px;
   padding: 15px 10px;
-  border-bottom: 2px solid black;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .yourbookinfo {
   display: flex;
@@ -97,9 +104,10 @@ li {
   display: flex;
   justify-content: space-around;
   border-radius: 10px;
+  max-width: 300px;
 }
 .loaninfo div img{
-  max-width: 200px;
+  max-width: 100px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 span img{
@@ -107,11 +115,15 @@ span img{
 }
 .allbookscontainer {
   border: 5px solid black;
-  width: 50%;
+  width: 70%;
   margin: auto;
   margin-top: 20px;
   padding: 30px;
   border-radius: 8px;
+  background-color: aliceblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .profileContainer {
   display: flex;
@@ -153,7 +165,8 @@ span img{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  flex-basis: 50%
+  flex-basis: 50%;
+  align-items: flex-end;
 }
 .inLineaddbooks{
   display: flex;
@@ -205,11 +218,7 @@ span img{
   height: 80px;
   margin: 0;
 }
-.foottsyle{
-  color: aliceblue;
-  font-size: 17px;
-  margin: 0;
-}
+
 svg{
   margin: 0;
 }

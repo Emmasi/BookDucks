@@ -19,8 +19,7 @@ const allFreeBooks =(books)=>{
       <p> Antal sidor: ${Pages}</P>
       <p>Fått betyget ${Grades} &#11088;</p>
       <p>För att låna, kontakta: ${user.data.attributes.email}</p>
-      </div>
-      <div><img src=http://localhost:1337${Picture.data.attributes.url}></div>`;
+        <img src=http://localhost:1337${Picture.data.attributes.url}></div>`;
       allbookscontainer.append(li)  
   });
 }
@@ -85,6 +84,9 @@ let allSoundbooks = (items) => {
     Soundbooklist.append(li);
   });
 };
+
+book()
+soundbook()
 
 document.querySelector("#registerBtn").addEventListener("click", regiBtn);
 document.querySelector("#loginBtn").addEventListener("click", loginBtn);
