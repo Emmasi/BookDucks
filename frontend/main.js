@@ -6,40 +6,44 @@ const logoutBtn = () => {
 const allFreeBooks =(books)=>{
   books.data.forEach((book) => {
       let li = document.createElement("li")
-      li.classList.add("loaninfo")
+      li.classList.add("librarybook")
       let{Title, Author, Grades, Pages,Picture,genres,user } = book.attributes;
       const allGenres = genres.data.map((item)=>{
         return item.attributes.Type
       }).join(", ")     
       li.innerHTML = `
+      <img src=http://localhost:1337${Picture.data.attributes.url}>
+      <div class="bookinfostyle">
+      <h4 class="infotextstyle"> ${Title}</h4>
+      <p class="infotextstyle">${allGenres}</hp>
+      <p class="infotextstyle"> Författare: ${Author}</p>
+      <p class="infotextstyle"> Antal sidor: ${Pages}</P>
+      <p class="infotextstyle">Fått betyget ${Grades} &#11088;</p>
+      </div>
       <div>
-      <h3> ${Title}</h3>
-      <h4>${allGenres}</h4>
-      <p> Författare: ${Author}</p>
-      <p> Antal sidor: ${Pages}</P>
-      <p>Fått betyget ${Grades} &#11088;</p>
-      <p>För att låna, kontakta: ${user.data.attributes.email}</p>
-        <img src=http://localhost:1337${Picture.data.attributes.url}></div>`;
+      <p class="kontaktastyle">Kontakta: ${user.data.attributes.email}</p></div>`;
       allbookscontainer.append(li)  
   });
 }
 const allFreeSoundbooks =(soundbooks)=>{
     soundbooks.data.forEach((soundbook) => {
       let li = document.createElement("li")
-      li.classList.add("loaninfo")
+      li.classList.add("librarybook")
       let{ Title, Grades, Length, Picture,genres, user } = soundbook.attributes;
       const allGenres = genres.data.map((item)=>{
         return item.attributes.Type
       }).join(", ")
       li.innerHTML = `
+      <img src=http://localhost:1337${Picture.data.attributes.url}>
+      <div class="bookinfostyle">
+      <h4 class="infotextstyle"> ${Title}</h4>
+      <p class="infotextstyle">${allGenres}</h5>
+      <p class="infotextstyle">Ljudbok</p>
+      <p class="infotextstyle"> Längd: ${Length}</p>
+      <p class="infotextstyle">Fått betyget ${Grades} &#11088;</p>
+      </div>
       <div>
-      <h3> ${Title}</h3>
-      <h4>${allGenres}</h4>
-      <p>Ljudbok</p>
-      <p> Längd: ${Length}</p>
-      <p>Fått betyget ${Grades} &#11088;</p>
-      <p>För att låna, kontakta: ${user.data.attributes.email}</p>
-      <img src=http://localhost:1337${Picture.data.attributes.url}></div>`;
+      <p class="kontaktastyle">Kontakta:${user.data.attributes.email}</p></div>`;
       allbookscontainer.append(li)
   });   
 }

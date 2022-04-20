@@ -54,20 +54,18 @@ h3 {
 }
 h4 {
   font-size: 25px;
-  margin-left: 40px;
 }
 h5{
     margin: 0 0 10px 0;
     font-size: 20px;
 }
-/* p{
-  margin: 5px 0 2px 0;
-} */
+.infotextstyle{
+  margin: 0 0 10px 0;
+}
 input {
   max-width: 100px;
   margin: 10px;
 }
-
 .loginContainer {
   max-width: 500px;
   display: flex;
@@ -100,7 +98,7 @@ input {
 li {
   margin: 10px 0px;
   padding: 15px 10px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
 }
 .yourbookinfo {
   display: flex;
@@ -116,12 +114,29 @@ li {
   border-radius: 10px;
   max-width: 300px;
 }
-.loaninfo div img{
-  max-width: 100px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
 span img{
   max-width: 100px;
+}
+.librarybook{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: #daa520 1px solid;
+  max-width: 200px;
+}
+.librarybook img{
+  width: 100%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.bookinfostyle{
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+}
+.kontaktastyle{
+  background-color: goldenrod;
+  padding: 10px;
 }
 .startcontainer{
   border: 5px solid black;
@@ -140,7 +155,10 @@ span img{
 }
 .bookcontainer{
   background-color: white;
-  border: black 3px solid;
+  border: black 5px solid;
+  border-radius: 8px;
+  width: 80%;
+  margin: auto;
 }
 .profileContainer {
   display: flex;
@@ -152,9 +170,13 @@ span img{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  border: 3px black solid;
+  align-items: flex-start;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  max-width: 250px;
+  background-color: white;
   border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
 }
 .youBookHeading {
   margin: 40px;

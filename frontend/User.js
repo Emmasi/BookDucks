@@ -28,10 +28,10 @@ const loginBtn = async () => {
   getTime = (items) => {
     items.forEach((item) => {
       persinolinfo.innerHTML = `
-      <span><h3>${sessionStorage.getItem("username")}</h3></span>
-      <p>Mitt id är:${sessionStorage.getItem("id")}</p>
-      <p>Min email:${sessionStorage.getItem("email")}</p>
-      <p>Registrering datum:${item.createdAt.slice(0, 10)}</p>`;
+      <span><h3 class="infotextstyle">${sessionStorage.getItem("username")}</h3></span>
+      <p class="infotextstyle">Mitt id är:${sessionStorage.getItem("id")}</p>
+      <p class="infotextstyle">Min email:${sessionStorage.getItem("email")}</p>
+      <p class="infotextstyle">Registrering datum:${item.createdAt.slice(0, 10)}</p>`;
     });
   };
 };
