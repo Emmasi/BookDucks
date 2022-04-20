@@ -20,7 +20,7 @@ const loginBtn = async () => {
   loginContainer.classList.add("hidde");
   profileContainer.classList.remove("hidde");
   registerContainer.classList.add("hidde");
-  allbookscontainer.classList.add("hidde");
+  allbookscontainer.innerHTML =" "
   book();
   soundBook();
   createTime();

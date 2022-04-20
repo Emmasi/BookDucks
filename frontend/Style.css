@@ -8,7 +8,7 @@ header {
   justify-content: space-around;
   align-items: center;
   border-bottom: #000 7px solid;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background-color:white
 }
 .duck {
@@ -17,6 +17,13 @@ header {
 }
 .fa{
   font-size: 40px;
+}
+.fa:hover{
+  color: goldenrod;
+}
+.none{
+  background-color: white;
+  border: none;
 }
 nav {
   width: 50%;
@@ -35,6 +42,7 @@ nav {
   text-decoration: underline;
   background-color: #fff000;
 }
+
 h1 {
   font-size: 80px;
 }
@@ -71,6 +79,7 @@ input {
   margin: 0 auto 30px;
   padding: 45px;
   text-align: center;
+  background-color: white;
 }
 .loginBtnContainer {
   display: flex;
@@ -83,6 +92,7 @@ input {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   padding: 45px;
   margin: 0 auto 100px;
+  background-color: white;
 }
 .hidde {
   display: none !important;
@@ -113,7 +123,7 @@ li {
 span img{
   max-width: 100px;
 }
-.allbookscontainer {
+.startcontainer{
   border: 5px solid black;
   width: 70%;
   margin: auto;
@@ -121,9 +131,16 @@ span img{
   padding: 30px;
   border-radius: 8px;
   background-color: aliceblue;
+
+}
+.allbookscontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.bookcontainer{
+  background-color: white;
+  border: black 3px solid;
 }
 .profileContainer {
   display: flex;
@@ -136,6 +153,8 @@ span img{
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  border: 3px black solid;
+  border-radius: 8px;
 }
 .youBookHeading {
   margin: 40px;
@@ -153,6 +172,7 @@ span img{
   margin: auto;
   margin-top: 20px;
   padding: 30px;
+  background-color: white;
 }
 .addsoundbook {
   border: 5px solid black;
@@ -160,13 +180,13 @@ span img{
   margin: auto;
   margin-top: 20px;
   padding: 30px;
+  background-color: white;
 }
 .inLine {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-basis: 50%;
-  align-items: flex-end;
 }
 .inLineaddbooks{
   display: flex;

@@ -35,7 +35,7 @@
       />
       <h1>BookDucks</h1>
       </div>
-      <button><i class="fa fa-user" aria-hidden="true" ></i></button>
+      <button class="none" id="iconlog"><i class="fa fa-user" aria-hidden="true" ></i></button>
     </header>
     <main>
       <section class="loginContainer hidde" id="loginContainer">
@@ -71,25 +71,24 @@
           <div>
             <h2 id="welcomeName"></h2>
           </div>
-          <button id="logoutBtn" class="logout Standardbtn">Logga Ut</button>
+
         </div>
         <nav class="inLine">
-          <button id="SeOthersBookBtn" class="navBtn btn">
-            Se utlåningsböcker
-          </button>
-          <button id="SeBookBtn" class="navBtn btn">Se mina böcker</button>
-          <button id="addBookBtn" class="navBtn btn">
-            Lägga till nya böcker
-          </button>
-          <button id="profileBtn" class="navBtn btn">Mina Profil</button>
+          <button id="SelibraryBtn" class="navBtn btn">Se biblioteket</button>
+          <button id="SeBookBtn" class="navBtn btn">Se mina Profil</button>
+          <button id="addBookBtn" class="navBtn btn">Lägga till nya böcker</button>
+          <!-- <button id="profileBtn" class="navBtn btn"></button> -->
+          <button id="logoutBtn" class="navBtn btn">Logga Ut</button>
         </nav>
       </section>
-      <nav class="inLine">
+      <nav class="inLine" id="genrefilter">
         <p>Action</p>
         <p>Fantasy</p>
         <p>Humor</p>
       </nav>
-      <section class="allbookscontainer" id="allbookscontainer">
+      <section class="startcontainer" id="startcontainer">
+        <h2>Vårat Bibliotek</h2>
+        <div class="allbookscontainer" id="allbookscontainer"></div>
       </section>
       <section id="addbook" class="addbook hidde">
         <h4>Lägg till nya böcker</h4>
@@ -228,13 +227,14 @@
         </div>
       </section>
       <section id="youBooks" class="allbookscontainer hidde">
+        <div id="persinolinfo" class="persinolinfo hidde"></div>
         <h3 class="youBookHeading">Dina utlåningsböcker:</h3>
-        <div class="inLine">
+        <div class="inLine bookcontainer">
           <ul id="booklist"></ul>
           <ul id="audiobooklist"></ul>
         </div>
       </section>
-      <section id="persinolinfo" class="persinolinfo hidde"></section>
+      
     </main>
     <footer>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
