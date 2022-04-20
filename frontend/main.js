@@ -12,6 +12,7 @@ const allFreeBooks =(books)=>{
         return item.attributes.Type
       }).join(", ")     
       li.innerHTML = `
+      <div>
       <img src=http://localhost:1337${Picture.data.attributes.url}>
       <div class="bookinfostyle">
       <h4 class="infotextstyle"> ${Title}</h4>
@@ -19,6 +20,7 @@ const allFreeBooks =(books)=>{
       <p class="infotextstyle"> Författare: ${Author}</p>
       <p class="infotextstyle"> Antal sidor: ${Pages}</P>
       <p class="infotextstyle">Fått betyget ${Grades} &#11088;</p>
+      </div>
       </div>
       <div>
       <p class="kontaktastyle">Kontakta: ${user.data.attributes.email}</p></div>`;
@@ -34,6 +36,7 @@ const allFreeSoundbooks =(soundbooks)=>{
         return item.attributes.Type
       }).join(", ")
       li.innerHTML = `
+      <div>
       <img src=http://localhost:1337${Picture.data.attributes.url}>
       <div class="bookinfostyle">
       <h4 class="infotextstyle"> ${Title}</h4>
@@ -41,6 +44,7 @@ const allFreeSoundbooks =(soundbooks)=>{
       <p class="infotextstyle">Ljudbok</p>
       <p class="infotextstyle"> Längd: ${Length}</p>
       <p class="infotextstyle">Fått betyget ${Grades} &#11088;</p>
+      </div>
       </div>
       <div>
       <p class="kontaktastyle">Kontakta:${user.data.attributes.email}</p></div>`;

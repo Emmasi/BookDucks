@@ -6,17 +6,23 @@ body {
 header {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
   border-bottom: #000 7px solid;
   margin-bottom: 30px;
   background-color:white
 }
+.inlinehead{
+  display: flex;
+  justify-content:center ;
+  align-items: flex-end;
+}
 .duck {
   margin: 10px;
-  width: 30%;
+  width: 20%;
 }
 .fa{
   font-size: 40px;
+  margin-bottom: 30px;
 }
 .fa:hover{
   color: goldenrod;
@@ -42,9 +48,17 @@ nav {
   text-decoration: underline;
   background-color: #fff000;
 }
-
+.genrefilter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visually-hidden{
+  opacity: 0;
+}
 h1 {
   font-size: 80px;
+  margin: 0 0 20px 0;
 }
 h2 {
   font-size: 45px;
@@ -120,7 +134,7 @@ span img{
 .librarybook{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   border: #daa520 1px solid;
   max-width: 200px;
