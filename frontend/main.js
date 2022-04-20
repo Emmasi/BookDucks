@@ -1,14 +1,15 @@
-//Knapp
+//loga ut Knapp
 const logoutBtn = () => {
   window.location.reload();
   sessionStorage.clear();
 };
+// funktion som tar fram alla böcker som finns
 const allFreeBooks =(books)=>{
   books.data.forEach((book) => {
-      let li = document.createElement("li")
+      const li = document.createElement("li")
       li.classList.add("librarybook")
-      let{Title, Author, Grades, Pages,Picture,genres,user } = book.attributes;
-      const allGenres = genres.data.map((item)=>{
+      const{Title, Author, Grades, Pages,Picture,genres,user } = book.attributes;
+      let allGenres = genres.data.map((item)=>{
         return item.attributes.Type
       }).join(", ")     
       li.innerHTML = `
@@ -27,12 +28,13 @@ const allFreeBooks =(books)=>{
       allbookscontainer.append(li)  
   });
 }
+// funktion som tar fram alla ljudböcker 
 const allFreeSoundbooks =(soundbooks)=>{
     soundbooks.data.forEach((soundbook) => {
-      let li = document.createElement("li")
+      const li = document.createElement("li")
       li.classList.add("librarybook")
-      let{ Title, Grades, Length, Picture,genres, user } = soundbook.attributes;
-      const allGenres = genres.data.map((item)=>{
+      const{ Title, Grades, Length, Picture,genres, user } = soundbook.attributes;
+      let allGenres = genres.data.map((item)=>{
         return item.attributes.Type
       }).join(", ")
       li.innerHTML = `
@@ -51,13 +53,14 @@ const allFreeSoundbooks =(soundbooks)=>{
       allbookscontainer.append(li)
   });   
 }
-// bara mina böcker
-let allbooks = (items) => {
-  let userid = sessionStorage.getItem("id");
+// funktion som tar fram bara mina böcker
+
+const allbooks = (items) => {
+  const userid = sessionStorage.getItem("id");
   let userbooks = items.data.filter((item) => item.attributes.user.data.id == userid);
   booklist.innerHTML = `<h4>Böcker</h3>`;
   userbooks.forEach((item) => {
-    let li = document.createElement("li");
+    const li = document.createElement("li");
     li.classList.add("loaninfo");
     li.innerHTML = `
     <span class="yourbookinfo">
@@ -71,15 +74,15 @@ let allbooks = (items) => {
   });
 };
 
-//bara mina ljudböcker
-let allSoundbooks = (items) => {
-  let userid = sessionStorage.getItem("id");
-  let usersoundbooks = items.data.filter(
+//funktion som tar fram bara mina ljudböcker
+const allSoundbooks = (items) => {
+  const userid = sessionStorage.getItem("id");
+  const usersoundbooks = items.data.filter(
     (item) => item.attributes.user.data.id == userid
   );
   Soundbooklist.innerHTML = `<h4>Ljudböcker</h3>`;
   usersoundbooks.forEach((item) => {
-    let li = document.createElement("li");
+    const li = document.createElement("li");
     li.classList.add("loaninfo");
     li.innerHTML = `
     <span class="yourbookinfo">
@@ -94,7 +97,7 @@ let allSoundbooks = (items) => {
 
 book()
 soundBook()
-
+// ger klick event till knappar 
 document.querySelector("#registerBtn").addEventListener("click", regiBtn);
 document.querySelector("#loginBtn").addEventListener("click", loginBtn);
 document.querySelector("#CreateUser").addEventListener("click", CreateUserBtn);

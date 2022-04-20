@@ -1,3 +1,4 @@
+//lägger till bok
 const addBokBtn = async () => {
   let Title = document.querySelector("#inputName").value;
   let Author = document.querySelector("#inputAuthor").value;
@@ -8,13 +9,11 @@ const addBokBtn = async () => {
     Type.forEach(genre => {
       checkedType.push(genre.value)
     })
-  console.log(Type)
   let user = sessionStorage.getItem("id");
-  console.log(user);
   let Picture = document.querySelector("#inputImg").files;
   let pictureData = new FormData();
   pictureData.append("files", Picture[0]);
-  console.log(checkedType)
+
   await axios
     .post("http://localhost:1337/api/upload", pictureData)
     .then(async (response) => {
@@ -24,7 +23,7 @@ const addBokBtn = async () => {
           Author,
           Pages,
           Grades,
-          genres:checkedType,
+          genres:checkedType, 
           user,
           Picture: response.data[0].id,
         },
@@ -48,6 +47,7 @@ const addBokBtn = async () => {
       alert("Du har lagt till en bok")
     });
 };
+//lägger till ljudbok
 
 const addsoundBokBtn = async () => {
   let Title = document.querySelector("#inputTitle").value;

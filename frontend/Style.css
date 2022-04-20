@@ -48,13 +48,15 @@ nav {
   text-decoration: underline;
   background-color: #fff000;
 }
-.genrefilter{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+fieldset label:hover{
+  text-decoration: underline;
 }
 .visually-hidden{
   opacity: 0;
+}
+legend{
+  font-size: 20px;
+  font-weight: bold;
 }
 h1 {
   font-size: 80px;
@@ -171,7 +173,7 @@ span img{
   background-color: white;
   border: black 5px solid;
   border-radius: 8px;
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 .profileContainer {
@@ -179,6 +181,12 @@ span img{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+.totheleft{
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 .persinolinfo {
   display: flex;

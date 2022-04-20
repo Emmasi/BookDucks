@@ -1,16 +1,13 @@
+//logga in knappen. använder username.value och password.value
 const loginBtn = async () => {
   const username = document.querySelector("#username").value;
   const userpassword = document.querySelector("#password").value;
 
-  document.querySelector(
-    "#welcomeName"
-  ).innerHTML = `Välkommen fina ${username}`;
+  document.querySelector("#welcomeName").innerHTML = `Välkommen fina ${username}`;
   const response = await axios.post("http://localhost:1337/api/auth/local/", {
     identifier: username,
     password: userpassword,
   });
-
-  // console.log(response.data.user.createat);
   let token = response.data.jwt;
   sessionStorage.setItem("token", token);
   sessionStorage.setItem("username", response.data.user.username);
@@ -43,7 +40,7 @@ const regiBtn = () => {
     registerContainer.classList.add("hidde");
   }
 };
-
+//skapa användare
 const CreateUserBtn = async () => {
   let newusername = document.querySelector("#newname");
   let newuseremail = document.querySelector("#newemail");
