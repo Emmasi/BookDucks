@@ -1,7 +1,7 @@
 //logga in iconen
 const iconlog = ()=>{
   startcontainer.classList.add("hidde")
-  genrefilter.classList.add("hidde")
+  // genrefilter.classList.add("hidde")
   loginContainer.classList.remove("hidde")
 }
 //se alla låneböcker
